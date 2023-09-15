@@ -6,7 +6,7 @@
  */
 
 import React from 'react';
-import type {PropsWithChildren} from 'react';
+import type { PropsWithChildren } from 'react';
 import {
   SafeAreaView,
   ScrollView,
@@ -30,7 +30,7 @@ type SectionProps = PropsWithChildren<{
   title: string;
 }>;
 
-function Section({children, title}: SectionProps): JSX.Element {
+function Section({ children, title }: SectionProps): JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
   return (
     <View style={styles.sectionContainer}>
@@ -77,17 +77,12 @@ function App(): JSX.Element {
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
           }}>
-          
           <Section title="Step One">
             Edit <Text style={styles.highlight}>App.tsx</Text> to change this
             screen and then come back to see your edits.
           </Section>
-
-            <View
-            // eslint-disable-next-line react-native/no-inline-styles
-            style={{justifyContent: 'center', alignItems: 'center', padding:10}}
-           >
-            <SvgComponent name="circle" width={100}/>
+          <View style={{ justifyContent: 'center', alignItems: 'center' }}>
+            <SvgComponent name="circle" />
           </View>
         </View>
       </ScrollView>
