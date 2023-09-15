@@ -7,7 +7,7 @@ interface Props extends SvgProps {
   fill?: string;
 }
 
-export default function SvgComponent(props: Props) {
+export const SvgComponent = (props: Props) => {
   if (!props.name) {
     return null;
   }
@@ -19,4 +19,4 @@ export default function SvgComponent(props: Props) {
   }
 
   return <Icon {...props} />;
-}
+};

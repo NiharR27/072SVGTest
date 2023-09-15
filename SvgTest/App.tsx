@@ -24,7 +24,7 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
-import SvgComponent from './components/Svg';
+import { SvgComponent } from './components';
 
 type SectionProps = PropsWithChildren<{
   title: string;
